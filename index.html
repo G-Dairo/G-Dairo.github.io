@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Gbenga Dairo | Portfolio</title>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: Arial, sans-serif;
       background: #f8f9fa;
@@ -29,7 +32,7 @@
       background: #0066cc;
     }
     .section {
-      margin-top: 40px;
+      margin-top: 60px;
     }
     ul.links {
       list-style-type: none;
@@ -45,13 +48,44 @@
     ul.links a:hover {
       text-decoration: underline;
     }
+    .navbar {
+      position: fixed;
+      top: 10px;
+      left: 20px;
+      z-index: 1000;
+      background: #ffffffdd;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .navbar a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #004080;
+      font-weight: bold;
+    }
+    .navbar a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
 
+  <!-- Navigation Menu -->
+  <div class="navbar">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#conferences">Conferences</a>
+    <a href="#hobby">Hobby</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+    <a href="#cv">CV</a>
+  </div>
+
   <h1>Gbenga Dairo</h1>
-  
-  <div class="section">
+
+  <!-- About -->
+  <div class="section" id="about">
     <h2>About Me</h2>
     <p>
       I’m a PhD student at the Institute of Quantitative Biomedicine, Rutgers University, with a multidisciplinary background spanning computational drug discovery, molecular biology, and clinical multi-omics integration.
@@ -60,7 +94,6 @@
       <br><br>
       I’m passionate about translating molecular insights into therapeutic innovation at the intersection of data-driven biology and patient-centered medicine.
     </p>
-
     <ul class="links">
       <li><a href="https://scholar.google.com/citations?hl=en&authuser=2&user=f_n7KUAAAAAJ" target="_blank">📚 Google Scholar</a></li>
       <li><a href="https://www.researchgate.net/profile/Gbenga-Dairo?ev=hdr_xprf" target="_blank">🔬 ResearchGate</a></li>
@@ -69,12 +102,35 @@
     </ul>
   </div>
 
-  <div class="section">
+  <!-- Projects -->
+  <div class="section" id="projects">
     <h2>Projects</h2>
     <a class="button" href="https://github.com/G-Dairo/exceRpt-singularity" target="_blank">exceRpt Singularity Pipeline</a>
   </div>
 
-  <div class="section">
+  <!-- Conferences -->
+  <div class="section" id="conferences">
+    <h2>Conferences</h2>
+  </div>
+
+  <!-- Hobby -->
+  <div class="section" id="hobby">
+    <h2>Hobby</h2>
+  </div>
+
+  <!-- Skills -->
+  <div class="section" id="skills">
+    <h2>Skills</h2>
+  </div>
+
+  <!-- CV -->
+  <div class="section" id="cv">
+    <h2>CV</h2>
+  </div>
+
+  <!-- Contact -->
+  <div class="section" id="contact">
+    <h2>Contact</h2>
     <p>Email: gsd67@scarletmail.rutgers.edu</p>
     <p>GitHub: <a href="https://github.com/G-Dairo" target="_blank">G-Dairo</a></p>
   </div>
