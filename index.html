@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="google-site-verification" content="xGQRHuq_XRtEfrXNRwJ_9JRfschKKhf38-a07t4Vj20" />
-  <meta property="og:title" content="Gbenga Dairo — Computational Biologist" />
+  <meta property="og:title" content="Gbenga Dairo" />
   <meta property="og:description" content="Computational biologist at Rutgers University specializing in multi-omics analysis, bioinformatics pipelines, and data-driven approaches to biological systems." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://g-dairo.github.io" />
   <meta property="og:image" content="https://g-dairo.github.io/Images/preview.png" />
-  <title>Gbenga Dairo — Computational Biologist</title>
+  <title>Gbenga Dairo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
@@ -552,6 +552,41 @@
     }
     .cv-download:hover { background: var(--gold); color: var(--ink); }
 
+    /* ─── Project Detail Pages (graphical abstract + read-article link) ─── */
+    .project-figure {
+      margin: 48px 0;
+      text-align: center;
+    }
+    .project-figure img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid var(--dust);
+    }
+    .project-figure figcaption {
+      margin-top: 14px;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .read-article {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 16px;
+      padding: 18px 36px;
+      background: var(--ink);
+      color: var(--warm-white);
+      text-decoration: none;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      transition: background 0.3s;
+    }
+    .read-article:hover { background: var(--gold); color: var(--ink); }
+
     /* ─── Hobby section ─── */
     .hobby-text {
       font-family: var(--body-serif);
@@ -738,14 +773,43 @@
         <p class="category-label">Multi-omics · PhD Research</p>
       </div>
       <div class="project-grid">
-        <a class="project-card" href="https://doi.org/10.21203/rs.3.rs-9696323/v1" target="_blank">
+        <a class="project-card" href="#" data-page="ics-biomarkers">
           <p class="proj-title">ICS Biomarkers in Asthma</p>
           <p class="proj-desc">Integrate steroid metabolomics to identify sex and pubertal specific biomarkers of inhaled corticosteroid response in childhood asthma.</p>
         </a>
         <!-- Add more PhD research projects here -->
       </div>
+      <div class="project-grid">
+        <a class="project-card" href="https://topmed.nhlbi.nih.gov/committees/lung" target="_blank">
+          <p class="proj-title">Genetic Regulation of the Methylome-Metabolome Axis in Asthma</p>
+          <p class="proj-desc">Integrated genome-wide mQTL and metQTL mapping with Bayesian colocalization across two pediatric asthma cohorts, and identified FADS2 as a key regulatory locus linking genetic variation, DNA methylation, and lipid metabolism to asthma pathobiology.</p>
+        </a>
+      </div>
 
-      <!-- Category 3: Computational Chemistry · Masters -->
+      <!-- Category 3: AI/ML Pipelines -->
+      <div class="project-category">
+        <p class="category-label">AI/ML Pipelines · GitHub</p>
+      </div>
+      <div class="project-grid">
+        <a class="project-card" href="https://github.com/G-Dairo/Belief-Space-Localization" target="_blank">
+          <p class="proj-title">Belief-Space Robot Localization</p>
+          <p class="proj-desc">Self-localization for a sensorless robot in a partially observable, non-deterministic environment. Implements optimal A* search over belief states, a local beam search for scalable efficiency, and adversarial worst-case start-state analysis.</p>
+        </a>
+        </div>
+        <div class="project-grid">
+        <a class="project-card" href="https://github.com/G-Dairo/Bayesian-Roomba-Tracking" target="_blank">
+          <p class="proj-title">Bayesian Roomba Tracking</p>
+          <p class="proj-desc">Recursive Bayesian filtering to track a moving target using a noisy proximity detector. Extends belief-space reasoning with decision-theoretic action selection and a mobile, utility-driven locator agent.</p>
+        </a>
+      </div>
+      <div class="project-grid">
+        <a class="project-card" href="https://github.com/G-Dairo/Learned-Astar-Heuristic" target="_blank">
+          <p class="proj-title">Learned A* Heuristic</p>
+          <p class="proj-desc">Training a regression model to predict A*'s optimal cost-to-go from a map and belief state, then evaluating it as a learned heuristic inside search.</p>
+        </a>
+        </div>
+
+      <!-- Category 4: Computational Chemistry · Masters -->
       <div class="project-category">
         <p class="category-label">Computational Chemistry · Masters</p>
       </div>
@@ -757,7 +821,7 @@
         <!-- Add more masters projects here -->
       </div>
 
-      <!-- Category 4: Predoctoral Training in Cell Biology · Harvard Medical School -->
+      <!-- Category 5: Predoctoral Training in Cell Biology · Harvard Medical School -->
       <div class="project-category">
         <p class="category-label">Predoctoral Training in Cell Biology · Harvard Medical School</p>
       </div>
@@ -769,6 +833,31 @@
         <!-- Add more Harvard projects here -->
       </div>
 
+    </div>
+  </div>
+
+  <!-- Project Detail: ICS Biomarkers in Asthma -->
+  <div class="page-overlay" id="page-ics-biomarkers">
+    <div class="page-inner">
+      <div class="chapter-header">
+        <p class="chapter-num">Multi-omics · PhD Research</p>
+        <h2 class="chapter-title">ICS Biomarkers<br><em>in Asthma</em></h2>
+      </div>
+      <div class="page-body">
+        <p><strong>Project Overview</strong></p>
+        <p>Asthma and responses to inhaled corticosteroids (ICS) can differ between males and females, yet the metabolic mechanisms underlying these differences remain poorly understood. In this study, we used targeted metabolomics to profile 16 endogenous steroid metabolites at baseline and after four years in 664 children with asthma from the Childhood Asthma Management Program (CAMP).</p>
+        <p>We identified sex-specific metabolic responses to ICS treatment. Males receiving ICS had significantly lower cortisol and cortisone levels at Year 4, while females showed more stable trajectories. ICS also altered relationships between steroid metabolites and key asthma outcomes—including lung function, eosinophils, and airway hyperresponsiveness—in a sex- and pathway-specific manner.</p>
+        <p>These findings highlight the potential of steroid metabolomics to characterize treatment response and support further investigation of sex-informed approaches to corticosteroid therapy in pediatric asthma.</p>
+      </div>
+
+      <figure class="project-figure">
+        <img src="Images/ics-graphical-abstract.png" alt="Graphical abstract: ICS use alters steroid metabolite levels, which in turn relate to lung function, airway hyperresponsiveness, and eosinophils in a sex-specific manner." />
+        <figcaption>Graphical Abstract</figcaption>
+      </figure>
+
+      <a class="read-article" href="https://link.springer.com/article/10.1186/s12931-026-03874-1" target="_blank">
+        <span>Read the full article →</span>
+      </a>
     </div>
   </div>
 
@@ -885,7 +974,7 @@
         <div class="contact-grid">
           <div class="contact-cell">
             <p class="contact-label">Google Scholar</p>
-            <p class="contact-value"><a href="https://scholar.google.com/citations?hl=en&authuser=2&user=f_n7KUAAAAAJ" target="_blank">View Publications →</a></p>
+            <p class="contact-value"><a href="https://scholar.google.com/citations?hl=en&user=2Iwnqm4AAAAJ&view_op=list_works&sortby=pubdate">View Publications →</a></p>
           </div>
           <div class="contact-cell">
             <p class="contact-label">ResearchGate</p>
@@ -917,7 +1006,7 @@
       <div class="contact-grid" style="margin-top:40px;">
         <div class="contact-cell">
           <p class="contact-label">Email</p>
-          <p class="contact-value"><a href="mailto:gsd67@scarletmail.rutgers.edu">gsd67@scarletmail.rutgers.edu</a></p>
+          <p class="contact-value"><a href="mailto:gbenga.dairo@rutgers.edu">gbenga.dairo@rutgers.edu</a></p>
         </div>
         <div class="contact-cell">
           <p class="contact-label">GitHub</p>
@@ -973,7 +1062,7 @@
     startTimer();
 
     // ─── Page Navigation ───
-    const navLinks = document.querySelectorAll('.nav-link[data-page]');
+    const navLinks = document.querySelectorAll('.nav-link[data-page], .project-card[data-page]');
     const pageClose = document.getElementById('pageClose');
     let openPage = null;
 
